@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style type="text/css">
+      .container{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        align-items:center;
+      }
+      .box{
+        width:20%;
+        height:200px;
+        margin:8px auto;
+        padding: 10px;
+
+      }
+      span{
+        margin-left: 5px;
+      }
+      img{
+        margin: 10px;
+        width: 100%;
+        box-shadow: border-box;
+      }
+      .box.invisible{
+        display:none;
+      }
+
+      #notFound{
+        display:none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" value="" id="myInput">
+    <button type="button" name="button" id="btn">search</button>
+    <div class="container">
+      <div id="notFound">
+        <h1>The house you wanted was not found</h1>
+      </div>
+       <div class="box ">
+          <a href="index.html">  <img src="images\a.png" alt="">
+             <br>
+            K<span class="price">800000</span></a>
+       </div>
+       <div class="box ">
+              <img src="images\a.png" alt="">
+               <br>
+            K<span class="price">40000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">400000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">600000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">800000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">200000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\a.png" alt="">
+           <br>
+         K<span class="price">450000</span>
+       </div>
+    </div>
+
+    <script type="text/javascript">
+     var btn=document.getElementById('btn'),
+         myInput=document.getElementById('myInput'),
+         box=document.getElementsByClassName('box'),
+         price=document.getElementsByClassName('price'),
+         notFound=document.getElementById('notFound');
+
+
+      btn.addEventListener('click',function(){
+        var value=myInput.value;
+        var counter=0;
+        for(var i=0;i<price.length;i++){
+         if(value!=price[i].innerHTML){
+              price[i].parentElement.classList.add("invisible");
+              counter++;
+          }
+          else{
+            price[i].parentElement.classList.remove("invisible");
+          }
+
+        }
+        if (counter==price.length) {
+            notFound.style.display="block";
+        }
+        else{
+          notFound.style.display="none";
+        }
+      })
+    </script>
+  </body>
+</html>

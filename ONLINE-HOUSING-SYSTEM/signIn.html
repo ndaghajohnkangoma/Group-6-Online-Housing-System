@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>sign in</title>
+    <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="font-awesome/fontawesome-free-5.14.0-web/css/all.css">
+      <script src=myScript.js>
+
+      </script>
+  </head>
+  <body style="">
+    <div class="header">
+
+      <ul>
+          <li id="myLogo"><span style="color:white">My</span><span style="color:aqua;font-style:italic">Dream</span><span style="color:red;font-style:italic">House</span></li>
+        <li>
+      <a href="index.html">Home <span class="myIcons"><i class="fas fa-home"></i></span></a>
+         </li>
+         <li>    <a href="#">Services <span class="myIcons"><i class="fas fa-warehouse"></i></span></a></li>
+         <li>    <a href="#">Contacts <span class="myIcons"><i class="fas fa-phone"></i></span></a></li>
+         <li>    <a href="#">About<span class="myIcons"><i class="fas fa-"></i></span></a></li>
+      </ul>
+      <a href="signIn.html" id="Subscribe" style="display:none">Sign in</a>
+    </div>
+    <div style="margin-top:100px">
+    </div>
+    <form action="site.php" method="post">
+    <div class="col">
+    <div class="signInColumn">
+      <p>Join our community <i class="fas fa-users"></i> today and get unlimited access to view all houses and other services offered here for <span style="background-color:yellow;padding-right:5px;padding-left:5px">free!</span></p>
+      <div class="logInbox">
+
+        <p style="letter-spacing:2px;color:blue">Log In</p>
+
+        <p><i class="fas fa-user"></i><input type="text" placeholder="Enter your username: " id="_username"></p>
+        <p id="validate1">please enter your username</p>
+        <p><i class="fas fa-lock"></i><input type="password"  placeholder="Enter your password:" id="_password">
+        </p>
+        <p id="validate2">please enter your password</p>
+        <p>
+          <input type="submit" name="" value="login"
+       onclick="validate()">
+        </p>
+        <div class="row">
+        <p>
+        <a href="#" id="eish">Forgot your password?</a>
+        </p>
+        <p>
+         <a href="#" id="eish">Create a new account</a>
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+</form>
+  <div class="bottomBar">
+    <div class="social-icons">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <p>Terms and conditions apply</p>
+  <p><span style="color:white">My</span><span style="color:aqua;font-style:italic">Dream</span><span style="color:red;font-style:italic">House</span> &copy; 2021 Copyright reserved<p>
+
+  </div>
+  </body>
+</html>

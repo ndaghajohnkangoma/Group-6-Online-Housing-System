@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Looking for a new house?</title>
+    <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="font-awesome/fontawesome-free-5.14.0-web/css/all.css">
+      <style type="text/css">
+        .container{
+          margin: 1.6em auto;
+          width:100%;
+          display:flex;
+          flex-wrap:wrap;
+          justify-content:center;
+          align-items:center;
+        }
+        .box{
+
+          width:20%;
+          height:200px;
+          margin:30px ;
+            }
+        span{
+
+        }
+        img{
+
+          height: 200px;
+          margin: 10px;
+          width: 100%;
+          box-shadow: 0 0 10px #d0d0d0;
+
+        }
+        .box.invisible{
+          display:none;
+        }
+        img:hover{
+          box-shadow: 0 0 10px #d0d0d0;
+        }
+
+        #notFound{
+          display:none;
+        }
+
+      </style>
+  </head>
+  <body >
+    <div class="header">
+
+      <ul>
+          <li id="myLogo"><span style="color:white">My</span><span style="color:aqua;font-style:italic">Dream</span><span style="color:red;font-style:italic">House</span></li>
+        <li>
+      <a href="index.html">Home <span class="myIcons"><i class="fas fa-home"></i></span></a>
+         </li>
+         <li>    <a href="#">Services <span class="myIcons"><i class="fas fa-warehouse"></i></span></a></li>
+         <li>    <a href="#">Contacts <span class="myIcons"><i class="fas fa-phone"></i></span></a></li>
+         <li>    <a href="#">About<span class="myIcons"><i class="fas fa-"></i></span></a></li>
+      </ul>
+      <a href="signIn.html" id="Subscribe" target="_blank">Sign in</a>
+    </div>
+    <div style="margin-top:150px;">
+    </div>
+     <p style="margin-left:100px;font-size:35px;margin-top:300px;">Looking for a new house to move into?</p>
+     <hr>
+     <p style="margin-left:100px;font-size:25px">Houses here are those available for rent enter below and lets look up a house for you </p>
+    <input type="text" name="" value="" id="myInput"style="margin-left:100px">
+    <button type="button" name="button" id="btn">SEARCH</button>
+    <div class="container">
+      <div id="notFound">
+        <p Sorry we couldnt find what you are Looking for</p>
+      </div>
+       <div class="box ">
+            <img src="images\a.png" alt="">
+             <br>
+            K<span class="price">800000</span>
+       </div>
+       <div class="box ">
+              <img src="images\b.png" alt="">
+               <br>
+            K<span class="price">40000</span>
+       </div>
+       <div class="box ">
+           <img src="images\c.png" alt="">
+            <br>
+            K<span class="price">400000</span>
+       </div>
+       <div class="box ">
+           <img  ="images\c.png" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\e.jpg" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\k.jpg" alt="">
+            <br>
+            K<span class="price">600000</span>
+       </div>
+       <div class="box ">
+           <img src="images\o.jpg" alt="">
+            <br>
+            K<span class="price">800000</span>
+       </div>
+       <div class="box ">
+           <img src="images\i.jpg" alt="">
+            <br>
+            K<span class="price">200000</span>
+       </div>
+       <div class="box ">
+           <img src="images\images.jpg" alt="">
+            <br>
+            K<span class="price">300000</span>
+       </div>
+       <div class="box ">
+           <img src="images\m.jpg" alt="">
+           <br>
+         K<span class="price">450000</span>
+       </div>
+       <div class="box ">
+           <img src="images\sample2.jpg" alt="">
+           <br>
+
+         K<span class="price">450000</span>
+       </div>
+       <div class="box ">
+           <img src="images\sample3.jpg" alt="">
+           <br>
+         K<span class="price">450000</span>
+       </div>   <div class="box ">
+              <img src="images\sample4.jpg" alt="">
+              <br>
+            K<span class="price">450000</span>
+          </div>
+          <div class="box ">
+              <img src="images\sample5.jpg" alt="">
+              <br>
+            K<span class="price">450000</span>
+          </div>
+          <div class="box ">
+              <img src="images\sample6.jpg" alt="">
+              <br>
+            K<span class="price">450000</span>
+          </div>
+          <div class="box ">
+              <img src="images\sample7.jpg" alt="">
+              <br>
+            K<span class="price">450000</span>
+          </div>
+
+    </div>
+    <script type="text/javascript">
+     var btn=document.getElementById('btn'),
+         myInput=document.getElementById('myInput'),
+         box=document.getElementsByClassName('box'),
+         price=document.getElementsByClassName('price'),
+         notFound=document.getElementById('notFound');
+
+
+      btn.addEventListener('click',function(){
+        var value=myInput.value;
+        var counter=0;
+        for(var i=0;i<price.length;i++){
+         if(value!=price[i].innerHTML){
+              price[i].parentElement.classList.add("invisible");
+              counter++;
+          }
+          else{
+            price[i].parentElement.classList.remove("invisible");
+          }
+
+        }
+        if (counter==price.length) {
+            notFound.style.display="block";
+        }
+        else{
+          notFound.style.display="none";
+        }
+      })
+    </script>
+    <div class="bottomBar">
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+      <p>Terms and conditions apply</p>
+    <p><span style="color:white">My</span><span style="color:aqua;font-style:italic">Dream</span><span style="color:red;font-style:italic">House</span> &copy; 2021 Copyright reserved<p>
+
+    </div>
+  </body>
+</html>
